@@ -1,4 +1,4 @@
-Octstyle
+Octo
 ======
 
 Github style ghost theme
