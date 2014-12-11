@@ -1,4 +1,4 @@
-casean
+Octstyle
 ======
 
 Github style ghost theme
