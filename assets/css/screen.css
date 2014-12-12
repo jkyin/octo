@@ -179,9 +179,10 @@ body {
     font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
     font-size: 13px;
     line-height: 1.6em;
-    color: #3A4145;
+    color: #00000;
     word-wrap: break-word;
     font-weight: normal;
+    background: #fff;
     -webkit-font-feature-settings: 'kern' 1;
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
