@@ -33,7 +33,7 @@ audio, canvas, video { display: inline-block; }
 audio:not([controls]) { display: none; height: 0; }
 [hidden], template { display: none; }
 html {
-   font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light", "Helvetica Neue", Helvetica;
+    font-family: "Open Sans", "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
    -ms-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
 }
@@ -176,7 +176,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+    font-family: "Open Sans", "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 13px;
     line-height: 1.6em;
     color: #00000;
@@ -207,12 +207,24 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     line-height: 1.4;
 }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #242628;
+    text-decoration: underline;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+    box-shadow: none;
+    text-decoration: none;
+    color: #5ba4e5;
+}
+
 h1 {
     font-size: 30 px
 }
 .post-content h2 {
     padding-bottom: 0.3em;
-    font-size: 1.75em;
+    font-size: 20px;
     line-height: 1.225;
     border-bottom: 1px solid #eee;
 }
@@ -234,6 +246,7 @@ h6 {
 a {
     color: #4183c4;
     text-decoration: none;
+    transition: color 0.3s ease,text-decoration 0.3s ease,background 0.3s ease;
 }
 
 a:hover {
@@ -343,11 +356,12 @@ tt {
 pre, pre code {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-size: 14px;
+    font-weight:normal;
     margin: 0;
-    padding: 16px;
+    /*padding: 16px;*/
     overflow: auto;
     line-height: 1.45;
-    background-color: #f8f8f8;
     border-radius: 3px;
     margin-bottom: 0;
     word-break: normal;
@@ -356,16 +370,13 @@ pre, pre code {
 
 pre {
     margin-bottom: 16px;
-    padding: 9px;
+    /*padding: 9px;*/
 }
 
 code {
-    padding: 0;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    margin: 0;
-    background-color: rgba(0,0,0,0.04);
-    border-radius: 3px;
+    font-family: Consolas,"Liberation Mono",Courier,monospace;
+    font-weight: 700;
+    color: #bd260d;
 }
 
 p code:before, p code:after {
@@ -741,8 +752,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
-    width: 80%;
-    max-width: 728px;
+    max-width: 888px;
     margin-top: 0;
     margin-bottom: 4rem;
     margin-left: auto;
@@ -775,6 +785,10 @@ margin on the iframe, cause it breaks stuff. */
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 32px;
+}
+
+.post-title a {
+text-decoration: none;
 }
 
 .post-excerpt p {
