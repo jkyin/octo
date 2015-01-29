@@ -179,17 +179,13 @@ body {
     font-family: "Open Sans", "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 13px;
     line-height: 1.6em;
-    color: #00000;
+    color: #333;
     word-wrap: break-word;
     font-weight: normal;
     background: #fff;
     -webkit-font-feature-settings: 'kern' 1;
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
-}
-
-body>*:first-child {
-    margin-top: 0 !important;
 }
 
 ::-moz-selection {
@@ -220,13 +216,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 
 h1 {
-    font-size: 30 px
-}
-.post-content h2 {
-    padding-bottom: 0.3em;
-    font-size: 20px;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
+    font-size: 30px
 }
 h3 {
     font-size: 1.5em;
@@ -250,7 +240,7 @@ a {
 }
 
 a:hover {
-    text-decoration:underline
+    text-decoration:none;
 }
 
 p, ul, ol, dl {
@@ -313,10 +303,7 @@ blockquote {
     padding: 0 15px;
     color: #777;
     border-left: 4px solid #ddd;
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 16px;
+    margin: 0 0 16px;
 }
 
 blockquote p {
@@ -358,12 +345,10 @@ pre, pre code {
     box-sizing: border-box;
     font-size: 14px;
     font-weight:normal;
-    margin: 0;
-    /*padding: 16px;*/
     overflow: auto;
     line-height: 1.45;
     border-radius: 3px;
-    margin-bottom: 0;
+    margin: 0;
     word-break: normal;
     word-wrap: normal;
 }
@@ -753,12 +738,9 @@ margin on the iframe, cause it breaks stuff. */
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     max-width: 888px;
-    margin-top: 0;
-    margin-bottom: 4rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 4rem;
     border-bottom: #EBF2F6 1px solid;
-    word-break: break-word;
+    word-break: break-all;
     hyphens: auto;
 }
 
@@ -781,10 +763,10 @@ margin on the iframe, cause it breaks stuff. */
     box-shadow: #FFF 0 0 0 5px;
 }
 
-.post-title{
+body:not(.post-template) .post-title {
     margin-top: 0;
     margin-bottom: 10px;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 .post-title a {
@@ -802,27 +784,25 @@ text-decoration: none;
 }
 
 .post-meta {
-    display: block;
-    list-style: none;
+    text-height: 20px;
     margin-bottom: 20px;
     color: #999;
 }
 
 .author-thumb {
-    width: 24px;
-    height: 24px;
-    float: right;
-    margin-right: 9px;
-    border-radius: 100%;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    margin-right: 2px;
 }
 
 .post-meta a {
     color: #999;
-    text-decoration: none;
 }
 
 .post-meta a:hover {
-    text-decoration: underline;
+    border-bottom: dotted 1px gray;
 }
 
 .meta-item {
@@ -924,6 +904,17 @@ text-decoration: none;
 .post-content {
     font-size: 16px;
     line-height: 1.6;
+}
+
+.post-content a:hover {
+    border-bottom: dotted 1px gray;
+}
+
+.post-content h2 {
+    padding-bottom: 0.3em;
+    font-size: 20px;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
 }
 
 /* Keep images centred and within the bounds of the post-width */
@@ -1282,7 +1273,6 @@ text-decoration: none;
 
 .page-number {
     display: inline-block;
-    padding: 2px 0;
     min-width: 100px;
     padding: 5px 15px;
 }
@@ -1390,7 +1380,6 @@ text-decoration: none;
         box-sizing: border-box;
         height: auto;
         min-height: 240px;
-        height: 60%;
         padding: 15% 0;
     }
 
@@ -1583,10 +1572,7 @@ text-decoration: none;
 
     .post {
         width: auto;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        margin-left: 16px;
-        margin-right: 16px;
+        margin: 2rem 16px;
         padding-bottom: 2rem;
         line-height: 1.65em;
     }
@@ -1676,7 +1662,6 @@ text-decoration: none;
     }
 
     .post-content .full-img {
-        width: auto;
         width: calc(100% + 32px); /* expand with to image + margins */
         margin: 0 -16px; /* get rid of margins */
         min-width: 0;
