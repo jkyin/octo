@@ -748,7 +748,7 @@ margin on the iframe, cause it breaks stuff. */
    just for the lolz and stylepoints. */
 .post:after {
     display: block;
-    content: "";
+    /*content: "";*/
     width: 7px;
     height: 7px;
     border: #E7EEF2 1px solid;
@@ -764,7 +764,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 body:not(.post-template) .post-title {
-    margin-top: 0;
+    /*margin-top: 0;*/
     margin-bottom: 10px;
     font-size: 24px;
 }
