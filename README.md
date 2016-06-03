@@ -3,7 +3,7 @@ Octo
 
 Github style ghost theme
 
-[Live Site Here](http://jkyin.me)
+[Live Site Here](https://jkyin.me)
 
 Demo 1:
 ![](https://github.com/jkyin/octo/blob/master/demoIndex.png)
