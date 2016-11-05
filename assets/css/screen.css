@@ -928,6 +928,11 @@ text-decoration: none;
     border: 1px solid #d8d8d8;
 }
 
+.post-edit-time {
+    color: #999;
+    font-size: 14px;
+}
+
 /* Break out larger images to be wider than the main text column
    the class is applied with jQuery */
 

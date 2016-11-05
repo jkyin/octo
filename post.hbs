@@ -34,14 +34,17 @@
 
                 <li class="meta-item">
                     <span class="octicon octicon-calendar"></span>
-                    <time class="meta-item post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                    <time class="meta-item post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time>
                 </li>
             </section>
         </header>
 
         <section class="post-content">
             {{content}}
+            <time class="post-date post-edit-time" datetime="{{date updated_at format='YYYY-MM-DD HH:mm'}}">编辑于 {{date updated_at format="YYYY-MM-DD HH:mm"}}</time>
         </section>
+        <!-- <section class="post-append post-content">
+        </section> -->
 
         <footer class="post-footer">
 
