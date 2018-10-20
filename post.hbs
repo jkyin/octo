@@ -6,8 +6,8 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+<header class="main-header post-head {{#if feature_image}}" style="background-image: url({{img_url}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav {{#if feature_image}}overlay{{/if}} clearfix">
         <a class="back-button icon-arrow-left" href="{{@blog.url}}">Home</a>
         <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
     </nav>
@@ -21,8 +21,8 @@
             <h1 class="post-title">{{title}}</h1>
             <section class="post-meta">
                 <li class="meta-item">
-                    {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
-                    {{author}}
+                    {{#if primary_author.profile_image}}<img class="author-thumb" src="{{primary_author.profile_image}}" alt="Author image" nopin="nopin" />{{/if}}
+                    {{authors}}
                 </li>
 
                 <li class="meta-item">
@@ -49,11 +49,11 @@
         <footer class="post-footer">
 
         {{! Everything inside the #author tags pulls data from the author }}
-        {{#author}}
+        {{#primary_author}}
 
-            {{#if image}}
+            {{#if feature_image}}
             <figure class="author-image">
-                <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                <a class="img" href="{{url}}" style="background-image: url({{img_url}})"><span class="hidden">{{name}}'s Picture</span></a>
             </figure>
             {{/if}}
 
@@ -71,7 +71,7 @@
                 </div>
             </section>
 
-        {{/author}}
+        {{/primary_author}}
 
             <section class="share">
                 <h4>Share this post</h4>

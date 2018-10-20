@@ -118,7 +118,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* Apply these base styles to all icons */
 [class^="icon-"]:before, [class*=" icon-"]:before {
     font-family: "casper-icons", "Open Sans", sans-serif;
-    speak: none;
+    speak-as: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -205,25 +205,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    color: #242628;
-    text-decoration: underline;
+    color: #4183c4;
+    text-decoration: none;
+    transition: color 0.3s ease,text-decoration 0.3s ease,background 0.3s ease;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-    box-shadow: none;
-    text-decoration: none;
-    color: #5ba4e5;
+    text-decoration:none;
 }
 
 h1 {
     font-size: 30px
 }
 h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
+    font-size: 1.25em;
 }
 h4 {
-    font-size: 1.25em;
+    font-size: 1.1em;
 }
 h5 {
     font-size: 1em;
@@ -567,8 +565,8 @@ margin on the iframe, cause it breaks stuff. */
 /* Hide when there's no cover image or on page2+ */
 .no-cover .scroll-down,
 .no-cover.main-header:after,
-.archive-template .scroll-down,
-.archive-template .main-header:after {
+.paged.archive- .scroll-down,
+.paged .main-header:after {
     display: none
 }
 
@@ -784,7 +782,9 @@ text-decoration: none;
 }
 
 .post-meta {
-    text-height: 20px;
+    margin-bottom: 8px !important;
+    margin-top: 4px !important;
+    font-weight: 20px;
     margin-bottom: 20px;
     color: #999;
 }
@@ -912,10 +912,10 @@ text-decoration: none;
 
 .post-content h2 {
     padding-bottom: 0.3em;
-    font-size: 20px;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
+    font-size: 1.5em;
+    border-bottom: 1px solid #eaecef;
 }
+
 
 /* Keep images centred and within the bounds of the post-width */
 .post-content img {
@@ -932,6 +932,54 @@ text-decoration: none;
     color: #999;
     font-size: 14px;
 }
+
+.kg-image-card,
+.kg-gallery-card {
+    margin: 0 0 1.5em;
+}
+
+.kg-image-card figcaption,
+.kg-gallery-card figcaption {
+    margin: -1.0em 0 1.5em;
+}
+
+.kg-gallery-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em auto;
+    max-width: 1040px;
+    width: 100vw;
+}
+
+.kg-gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.kg-gallery-image img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+    margin: 0.75em 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+    margin: 0 0 0 0.75em;
+}
+
+.kg-width-wide img {
+    max-width: 85vw;
+}
+  
+.kg-width-full img {
+    max-width: 100vw;
+}
+
 
 /* Break out larger images to be wider than the main text column
    the class is applied with jQuery */
@@ -1216,7 +1264,7 @@ text-decoration: none;
 
 /* Turn off meta for page2+ to make room for extra
    pagination prev/next links */
-.archive-template .author-profile .author-meta {
+   .paged .author-profile .author-meta {
     display: none;
 }
 
@@ -1317,12 +1365,12 @@ text-decoration: none;
 }
 
 /* On page2+ make all the headers smaller */
-.archive-template .main-header {
+.paged .main-header {
     max-height: 30%;
 }
 
 /* On page2+ show extra pagination controls at the top of post list */
-.archive-template .extra-pagination {
+.paged .extra-pagination {
     display: block;
 }
 
@@ -1391,7 +1439,7 @@ text-decoration: none;
     .scroll-down,
     .home-template .main-header:after { display: none; }
 
-    .archive-template .main-header {
+    .paged .main-header {
         min-height: 180px;
         padding: 10% 0;
     }
@@ -1503,7 +1551,7 @@ text-decoration: none;
         height: 30%;
     }
 
-    .archive-template .main-header {
+    .paged .main-header {
         max-height: 20%;
         min-height: 160px;
         padding: 10% 0;
@@ -1743,7 +1791,7 @@ text-decoration: none;
         font-size: 1.4rem;
     }
 
-    .archive-template .main-header .page-description {
+    .paged .main-header .page-description {
         display: none;
     }
 

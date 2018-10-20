@@ -7,12 +7,12 @@
 
         <footer class="post-meta">
             <li class="meta-item">
-                {{#if author.image}}
-                    <img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />
+                {{#if primary_author.profile_image}}
+                    <img class="author-thumb" src="{{primary_author.profile_image}}" alt="Author image" nopin="nopin" />
                 {{else}}
                     <span class="octicon octicon-person"></span>
                 {{/if}}
-                {{author}}
+                {{authors}}
             </li>
 
             <li class="meta-item">
