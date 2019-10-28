@@ -1,5 +1,6 @@
 {
   "name": "octo",
+<<<<<<< Updated upstream
   "description": "github style theme",
   "version": "0.2.8",
   "engines": {
@@ -16,3 +17,11 @@
     "ghost-theme"
   ]
 }
+=======
+  "version": "0.2.7",
+  "author": {
+    "name": "jkyin",
+    "email": "yinxiaoyu888@gmail.com"
+  }
+}
+>>>>>>> Stashed changes

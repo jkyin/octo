@@ -2,11 +2,19 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! The big featured header }}
+<<<<<<< Updated upstream
 <header class="main-header {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
     <nav class="main-nav overlay clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
         <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
         {{#if @blog.cover_image}}
+=======
+<header class="main-header {{#if @site.cover_image}}" style="background-image: url({{@site.cover_image}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav overlay clearfix">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="Blog Logo" /></a>{{/if}}
+        <a class="subscribe-button icon-feed" href="{{@site.url}}/rss/">Subscribe</a>
+        {{#if @site.cover_image}}
+>>>>>>> Stashed changes
         <a href="https://github.com/jkyin">
             <img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png">
         </a>
@@ -14,8 +22,8 @@
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
-            <a href="{{@blog.url}}"><h1 class="page-title">{{@blog.title}}</h1></a>
-            <h2 class="page-description">{{@blog.description}}</h2>
+            <a href="{{@site.url}}"><h1 class="page-title">{{@site.title}}</h1></a>
+            <h2 class="page-description">{{@site.description}}</h2>
         </div>
     </div>
     <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>

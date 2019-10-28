@@ -8,8 +8,13 @@
 
 <header class="main-header post-head {{#if feature_image}}" style="background-image: url({{img_url}}){{else}}no-cover{{/if}}">
     <nav class="main-nav {{#if feature_image}}overlay{{/if}} clearfix">
+<<<<<<< Updated upstream
         <a class="back-button icon-arrow-left" href="{{@blog.url}}">Home</a>
         <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
+=======
+        <a class="back-button icon-arrow-left" href="{{@site.url}}">Home</a>
+        <a class="subscribe-button icon-feed" href="{{@site.url}}/rss/">Subscribe</a>
+>>>>>>> Stashed changes
     </nav>
 </header>
 
@@ -51,7 +56,11 @@
         {{! Everything inside the #author tags pulls data from the author }}
         {{#primary_author}}
 
+<<<<<<< Updated upstream
             {{#if feature_image}}
+=======
+            {{#if profile_image}}
+>>>>>>> Stashed changes
             <figure class="author-image">
                 <a class="img" href="{{url}}" style="background-image: url({{img_url}})"><span class="hidden">{{name}}'s Picture</span></a>
             </figure>

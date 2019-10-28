@@ -4,16 +4,24 @@
 {{! The big featured header }}
 
 {{! Everything inside the #author tags pulls data from the author }}
+<<<<<<< Updated upstream
 {{#primary_author}}
+=======
+{{#author}}
+>>>>>>> Stashed changes
     <header class="main-header author-head {{#if cover_image}}" style="background-image: url({{cover_image}}){{else}}no-cover{{/if}}">
         <nav class="main-nav overlay clearfix">
             <a class="subscribe-button icon-feed" href="{{url}}rss/">{{name}}</a>
-            <a class="back-button icon-arrow-left" href="{{@blog.url}}">Home</a>
+            <a class="back-button icon-arrow-left" href="{{@site.url}}">Home</a>
         </nav>
     </header>
 
     <section class="author-profile inner">
+<<<<<<< Updated upstream
         {{#if feature_image}}
+=======
+        {{#if profile_image}}
+>>>>>>> Stashed changes
         <figure class="author-image">
             <div class="img" style="background-image: url({{img_url}})"><span class="hidden">{{name}}'s Picture</span></div>
         </figure>
