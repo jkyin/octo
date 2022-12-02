@@ -1,9 +1,9 @@
 {
   "name": "octo",
   "description": "github style theme",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "engines": {
-      "ghost": ">=2.2.4"
+      "ghost": ">=5.24"
   },
   "license": "MIT",
   "author": {
